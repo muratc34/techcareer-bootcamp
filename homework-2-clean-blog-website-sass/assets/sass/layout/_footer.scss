@@ -1,0 +1,26 @@
+.footer{
+    @include flex(center, center);
+    flex-direction: column;
+    
+    padding: 3rem 0 4rem;
+    &-list{
+        @include flex(center, center);
+        gap: 2rem;
+        &-item{
+            @include flex(center, center);
+            height: 3rem;
+            width: 3rem;
+            background: $primary-text-color;
+            color: $white;
+            border-radius: 50% 50%;
+            font-size: 1.5rem;
+        }
+    }
+
+    &-copyright{
+        margin-top: 1.875rem;
+        font-family: $secondary-font;
+        font-size: 0.875rem;
+        color: $secondary-text-color;
+    }
+}

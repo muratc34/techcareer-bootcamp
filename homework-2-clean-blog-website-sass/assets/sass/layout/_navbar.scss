@@ -1,0 +1,61 @@
+.navbar{
+    @include flex(center, space-between);
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+
+    &-logo{
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: $nav-color;
+    }
+    
+    &-btn{
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        border: 1px solid rgba($color: #000, $alpha: 0.1);
+        border-radius: 0.25rem;
+        color: $nav-color;
+        background-color: transparent;
+        padding: 0.8125rem;
+
+        &-icon{
+            margin-left: 0.2rem;
+            font-size: 0.75rem;
+        }
+    }
+
+    &-menu{
+        position: relative;
+        text-align: left;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+
+        &-item{
+
+            &-link{
+                display: block;
+                width: 100%;
+                padding: 0.5rem 0;
+                color: rgba(0, 0, 0, 0.5);
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+
+            &-link:hover{
+                color: $nav-color;
+            }
+        }
+    }
+
+    &-menu.show{
+        max-height: 250px;
+    }
+}

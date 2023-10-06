@@ -1,0 +1,17 @@
+@use 'abstracts' as *;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@300;400;700&display=swap');
+
+// Base Styles
+@import "base/reset";
+
+// Layout
+@import "layout/footer";
+@import "layout/navbar";
+
+// Pages
+@import "pages/home/home";
+@import "pages/about/about";
+@import "pages/posts/posts";
+@import "pages/contact/contact";
