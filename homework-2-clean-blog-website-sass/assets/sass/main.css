@@ -36,6 +36,13 @@ input {
   outline: 0;
 }
 
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -120,4 +127,88 @@ input {
 }
 .navbar-menu.show {
   max-height: 250px;
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+}
+.home-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.5;
+}
+.home-header-group {
+  padding: 150px 0 150px;
+  z-index: 1;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.home-header-group-title {
+  font-size: 3.125rem;
+}
+.home-header-group-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin: 10px 0 0;
+}
+
+.home-post-link {
+  color: #212529;
+}
+.home-post-link-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  margin-top: 1.875rem;
+  margin-bottom: 0.625rem;
+  line-height: 1.2;
+}
+.home-post-link-subtitle {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+.home-post-link:hover {
+  color: #0085A1;
+}
+.home-post-meta {
+  font-size: 1.125rem;
+  font-style: italic;
+  font-family: "Lora", serif;
+  margin-bottom: 1.875rem;
+  color: #6c757d;
+}
+
+.home-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+  text-transform: uppercase;
+}
+.home-button-link {
+  cursor: pointer;
+  background-color: #0085A1;
+  border-color: #0085A1;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 15px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
 }/*# sourceMappingURL=main.css.map */

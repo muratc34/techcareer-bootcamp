@@ -1,0 +1,40 @@
+.home-header{
+    @include flex(center, center);
+    flex-direction: column;
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #6c757d;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #212529;
+        opacity: 0.5;
+    }
+
+    &-group{
+        padding: 150px 0 150px;
+        z-index: 1;
+        font-family: $primary-font;
+        color: $white;
+        text-align: center;
+
+        &-title{
+            font-size: 3.125rem;
+        }
+    
+        &-subtitle{
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            display: block;
+            margin: 10px 0 0;
+        }
+    }
+}

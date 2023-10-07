@@ -1,0 +1,31 @@
+.home-post{
+
+    &-link{
+        color: $primary-text-color;
+        &-title{
+            font-size: 1.875rem;
+            font-weight: 800;
+            margin-top: 1.875rem;
+            margin-bottom: 0.625rem;
+            line-height: 1.2
+        }
+    
+        &-subtitle{
+            font-size: 1.75rem;
+            font-weight: 300;
+            margin: 0 0 10px;
+        }
+    }
+
+    &-link:hover{
+        color: $hover-color;
+    }
+
+    &-meta{
+        font-size: 1.125rem;
+        font-style: italic;
+        font-family: $secondary-font;
+        margin-bottom: 1.875rem;
+        color: $secondary-text-color;
+    }
+}
