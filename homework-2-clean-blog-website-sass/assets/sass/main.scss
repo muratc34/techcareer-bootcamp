@@ -5,6 +5,12 @@
 
 // Base Styles
 @import "base/reset";
+@import "base/base";
+
+// Components
+@import "components/button";
+@import "components/post";
+@import "components/header";
 
 // Layout
 @import "layout/footer";

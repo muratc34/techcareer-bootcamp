@@ -29,9 +29,15 @@
     }
 
     &-menu{
-        position: relative;
+        position: absolute;
+        top: 61px;
+        z-index: 100;
+        left: 0;
+        right: 0;
+        background: $white;
         text-align: left;
         width: 100%;
+        padding: 0 1rem;
         overflow: hidden;
         max-height: 0;
         transition: max-height 0.3s ease-out;
