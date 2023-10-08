@@ -1,3 +1,4 @@
+@use '../abstracts/' as *;
 .navbar{
     @include flex(center, space-between);
     flex-direction: row;
@@ -5,14 +6,19 @@
     height: max-content;
     padding: 0.5rem 1rem;
     flex-wrap: wrap;
+    background-color: white;
+    position: static;
+    z-index: 100;
 
     &-logo{
         font-size: 1.25rem;
         font-weight: 800;
         color: $nav-color;
+        z-index: 100;
     }
     
     &-btn{
+        display: block;
         font-size: 0.75rem;
         font-weight: 800;
         text-transform: uppercase;
@@ -63,5 +69,57 @@
 
     &-menu.show{
         max-height: 250px;
+    }
+}
+
+@include laptop{
+    .navbar{
+        @include flex(center, flex-start);
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        flex-wrap: nowrap;
+        left: 0;
+        right: 0;
+        position: absolute;
+
+        &-logo{
+            padding: 0.625rem 1.25rem;
+            width: max-content;
+            color: $white;
+            margin-right: 1rem;
+            white-space: nowrap;
+        }
+
+        &-logo:hover{
+            color: rgba($color: #fff, $alpha: 0.8);
+        }
+
+        &-btn{
+            display: none;
+        }
+
+        &-menu{
+            position: static;
+            background: transparent;
+            text-align: right;
+            width: 100%;
+            padding: 0 1rem;
+            overflow: visible;
+
+            &-item{
+                display: inline;
+                &-link{
+                    display: inline;
+                    padding: 0.625rem 1.25rem;
+                    color: $white;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                }
+    
+                &-link:hover{
+                    color: rgba($color: #fff, $alpha: 0.8);
+                }
+            }
+        }
     }
 }

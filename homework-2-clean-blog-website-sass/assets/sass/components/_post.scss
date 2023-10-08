@@ -1,5 +1,5 @@
 .post{
-
+    
     &-link{
         color: $primary-text-color;
         &-title{
@@ -27,5 +27,15 @@
         font-family: $secondary-font;
         margin-bottom: 1.875rem;
         color: $secondary-text-color;
+    }
+}
+
+@include tablet{
+    .post{
+        &-link{
+            &-title{
+                font-size: 2.25rem;
+            }
+        }
     }
 }

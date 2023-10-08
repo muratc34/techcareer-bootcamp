@@ -1,7 +1,33 @@
+@use "../abstracts/" as *;
+
 .container{
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+@include mobile {
+    .container{
+        max-width: 540px;
+    }
+}
+
+@include tablet {
+    .container{
+        max-width: 720px;
+    }
+}
+
+@include laptop{
+    .container{
+        max-width: 960px;
+    }
+}
+
+@include desktop{
+    .container{
+        max-width: 1140px;
+    }
 }

@@ -51,6 +51,26 @@ hr {
   margin-left: auto;
 }
 
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
 .button {
   display: flex;
   align-items: center;
@@ -96,6 +116,11 @@ hr {
   color: #6c757d;
 }
 
+@media only screen and (min-width: 768px) {
+  .post-link-title {
+    font-size: 2.25rem;
+  }
+}
 .header {
   display: flex;
   align-items: center;
@@ -135,6 +160,11 @@ hr {
   margin: 10px 0 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .header-group-title {
+    font-size: 5rem;
+  }
+}
 .footer {
   display: flex;
   align-items: center;
@@ -176,13 +206,18 @@ hr {
   height: max-content;
   padding: 0.5rem 1rem;
   flex-wrap: wrap;
+  background-color: white;
+  position: static;
+  z-index: 100;
 }
 .navbar-logo {
   font-size: 1.25rem;
   font-weight: 800;
   color: #343a40;
+  z-index: 100;
 }
 .navbar-btn {
+  display: block;
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -227,6 +262,54 @@ hr {
   max-height: 250px;
 }
 
+@media only screen and (min-width: 992px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    flex-wrap: nowrap;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+  .navbar-logo {
+    padding: 0.625rem 1.25rem;
+    width: -moz-max-content;
+    width: max-content;
+    color: #fff;
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+  .navbar-logo:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .navbar-btn {
+    display: none;
+  }
+  .navbar-menu {
+    position: static;
+    background: transparent;
+    text-align: right;
+    width: 100%;
+    padding: 0 1rem;
+    overflow: visible;
+  }
+  .navbar-menu-item {
+    display: inline;
+  }
+  .navbar-menu-item-link {
+    display: inline;
+    padding: 0.625rem 1.25rem;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  .navbar-menu-item-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
 .about-content {
   line-height: 1.5;
   margin: 1.875rem 0;
