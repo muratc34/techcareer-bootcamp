@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Axios</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <ul class="products">
+    </ul>
+    <br>
+    <div class="forms">
+        <div>
+            <h1>Add Product</h1>
+            <div>
+                <label>Product Name</label>
+                <input class="productName" type="text">
+            </div>
+            <div>
+                <label>Unit Price</label>
+                <input class="unitPrice" type="number">
+            </div>
+            <div>
+                <label>Units In Stock</label>
+                <input class="unitsInStock" type="number">
+            </div>
+            <div>
+                <label>Units On Order</label>
+                <input class="unitsOnOrder" type="number">
+            </div>
+            <div>
+                <button type="submit" onclick="postProduct()">Gönder</button>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h1>Delete Product</h1>
+            <div>
+                <label>Product Id</label>
+                <input class="productId" type="number">
+            </div>
+            <div>
+                <button type="submit" onclick="deleteProduct()">Gönder</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+</html>

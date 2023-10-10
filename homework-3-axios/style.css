@@ -1,0 +1,14 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.products li{
+    flex-basis: calc(20% - 10px);
+}
+
+.forms{
+    display: flex;
+    gap: 5rem;
+}
