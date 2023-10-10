@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <style>
+        .orders{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .orders li{
+            flex-basis: calc(20% - 10px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 1</h1>
+    <ul class="orders">
+        
+    </ul>
+    <br>
+
+</body>
+<script>
+
+    const orderUl = document.querySelector(".orders");
+    axios.get("https://northwind.vercel.app/api/orders")
+        .then(res =>{
+            const orders = res.data
+            orders.forEach(order => {
+                const orderLi = document.createElement("li");
+                orderLi.innerText = order.customerId
+                orderUl.appendChild(orderLi)
+            });
+
+            const filterByCountry = orders.filter(o => o.shipAddress.country == "USA")
+            console.log("Task 2 - Country USA olan datalar ",filterByCountry.length)
+
+            const ordersIn1996 = orders.filter(o => {
+                const orderYear =   new Date(o.orderDate).getFullYear();
+                return orderYear === 1996;
+            })
+            console.log("Task 3.1 - 1996 yılındaki siparişler: ", ordersIn1996);
+
+            const overDateOrders = orders.filter(o => {
+                const requiredDate = new Date(o.requiredDate);
+                const shippedDate = new Date(o.shippedDate);
+
+                return shippedDate > requiredDate;
+            })
+
+            console.log("Task 3.2 - Geçiken siparişler", overDateOrders)
+        })
+
+
+</script>
+</html>
