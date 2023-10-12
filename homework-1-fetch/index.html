@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <ul class="suppliers">
+
+    </ul>
+</body>
+<script>
+    const suppliers = document.querySelector(".suppliers");
+    fetch("https://northwind.vercel.app/api/suppliers")
+        .then(res => res.json())
+        .then(res =>{
+           const startsWithM = res.filter(s => s.companyName.startsWith('M'))
+           console.log(startsWithM)
+
+           const filterCountryJp = res.filter(s => s.address?.country == "Japan")
+           console.log(filterCountryJp)
+
+           res.forEach(element => {
+                const li = document.createElement('li');
+                li.innerText = element.companyName;
+                suppliers.appendChild(li);
+           });
+
+        })
+</script>
+</html>
