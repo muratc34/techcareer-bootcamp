@@ -1,0 +1,28 @@
+.inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100px;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.inputs-content{
+    display: flex;
+    flex-direction: column;
+    flex: 50% 50%;
+    
+}
+
+.btn{
+    display: flex;
+    cursor: pointer;
+    margin: 1rem auto;
+}
+
+.box{
+    margin: 1rem auto;
+    border: 2px solid black;
+}
